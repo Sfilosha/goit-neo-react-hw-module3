@@ -3,7 +3,6 @@ import css from "./ContactForm.module.css";
 import * as Yup from "yup";
 import { useId } from "react";
 import { nanoid } from "nanoid";
-import InputMask from "react-input-mask";
 
 function ContactForm({ onAdd }) {
   const nameFieldId = useId();
@@ -51,7 +50,6 @@ function ContactForm({ onAdd }) {
                 type="text"
                 name="name"
                 id={nameFieldId}
-                mask="999-99-99"
               />
               <ErrorMessage
                 className={css.error}
