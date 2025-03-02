@@ -19,7 +19,7 @@ function ContactForm({ onAdd }) {
   });
 
   const handleSubmit = (values, actions) => {
-    console.log(values);
+    // console.log(values);
 
     onAdd({
       id: nanoid(),
