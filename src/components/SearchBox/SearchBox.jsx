@@ -6,23 +6,22 @@ function SearchBox({ onSearch, value }) {
   const searchFieldId = useId();
 
   return (
-    <Formik initialValues={value}>
-      <Form className={css.searchForm}>
-        <div className={css.searchField}>
-          <label name="search" id={searchFieldId}>
-            Find contact by name
-          </label>
-          <Field
-            name="search"
-            id={searchFieldId}
-            value={value}
-            onChange={(e) => {
-              onSearch(e.target.value);
-            }}
-          ></Field>
-        </div>
-      </Form>
-    </Formik>
+    <form className={css.searchForm}>
+      <div className={css.searchField}>
+        <label name="search" id={searchFieldId} htmlFor={searchFieldId}>
+          Find contact by name
+        </label>
+        <input
+          type="text"
+          name="search"
+          id={searchFieldId}
+          value={value}
+          onChange={(e) => {
+            onSearch(e.target.value);
+          }}
+        />
+      </div>
+    </form>
   );
 }
 
